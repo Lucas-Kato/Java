@@ -1,5 +1,5 @@
 package Br.Com.ByteBank.Banco.Modelo;
-public class Cliente {
+public class Cliente extends Object {
     private String nome;
     private String cpf;
     private String profissao;

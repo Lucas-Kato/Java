@@ -2,6 +2,13 @@ package Br.Com.ByteBank.Banco.Teste;
 
 import Br.Com.ByteBank.Banco.Modelo.*;
 
+/**
+ * Classe que representa um Cliente no Bytebank
+ * 
+ * @author Kato
+ * @version 0.1
+ * 
+ */
 
 public class TesteTributaveis {
     public static void main(String[] args) {

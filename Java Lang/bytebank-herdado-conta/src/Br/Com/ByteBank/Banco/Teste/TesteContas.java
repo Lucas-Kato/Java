@@ -4,7 +4,10 @@ import Br.Com.ByteBank.Banco.Modelo.ContaCorrente;
 import Br.Com.ByteBank.Banco.Modelo.ContaPoupanca;
 import Br.Com.ByteBank.Banco.Modelo.SacaException;
 
+//Br.Com.ByteBank.Banco.Teste.TesteContas
 public class TesteContas {
+
+    //java.lang.String
     public static void main(String[] args) throws SacaException{
 
         ContaCorrente cc = new ContaCorrente(111, 111);
@@ -15,6 +18,7 @@ public class TesteContas {
 
         cc.transfere(10, cp);
 
+        //java.lang.System
         System.out.println("CC: " + cc.getSaldo());
         System.out.println("CP: " + cp.getSaldo());
 
