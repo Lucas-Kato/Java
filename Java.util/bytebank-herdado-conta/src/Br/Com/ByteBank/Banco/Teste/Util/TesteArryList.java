@@ -1,6 +1,10 @@
 package Br.Com.ByteBank.Banco.Teste.Util;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Vector;
 
 import Br.Com.ByteBank.Banco.Modelo.Conta;
 import Br.Com.ByteBank.Banco.Modelo.ContaCorrente;
@@ -8,8 +12,9 @@ import Br.Com.ByteBank.Banco.Modelo.ContaCorrente;
 public class TesteArryList {
     public static void main(String[] args) {
         //Generics
-        ArrayList<Conta> lista = new ArrayList<Conta>();
-
+        ArrayList<Conta> lista = new ArrayList<Conta>(); // usa array por baixo
+        List<Conta> list = new LinkedList<Conta>(); // lista linkada
+        List<Conta> list2 = new Vector<Conta>(); // usa array por baixo . mas também é thredsafe 
         ArrayList<String> nomes = new ArrayList<String>();
 
         Conta cc = new ContaCorrente(22, 11);
