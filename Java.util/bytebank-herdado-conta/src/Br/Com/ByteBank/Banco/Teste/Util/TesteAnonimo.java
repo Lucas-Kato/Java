@@ -3,13 +3,14 @@ package Br.Com.ByteBank.Banco.Teste.Util;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 
 import Br.Com.ByteBank.Banco.Modelo.Cliente;
 import Br.Com.ByteBank.Banco.Modelo.Conta;
 import Br.Com.ByteBank.Banco.Modelo.ContaCorrente;
 import Br.Com.ByteBank.Banco.Modelo.ContaPoupanca;
 
-public class teste {
+public class TesteAnonimo {
     public static void main(String[] args) {
         Conta cc1 = new ContaCorrente(22, 33);
         Cliente clienteCC1 = new Cliente();
@@ -41,17 +42,17 @@ public class teste {
         lista.add(cc3);
         lista.add(cc4);
 
-        lista.sort(
-                (Conta c1, Conta c2) -> Integer.compare(c1.getNumero(), c2.getNumero())
-        );
+        lista.sort( (Conta c1, Conta c2) -> Integer.compare(c1.getNumero(), c2.getNumero()) );
             
-
-
         Comparator<Conta> comp = (Conta c1, Conta c2) -> {
-        
-                return Integer.compare(c1.getNumero(), c2.getNumero());
-            
+            String nomeC1 = c1.getTitular().getNome();
+            String nomeC2 = c2.getTitular().getNome();
+                return nomeC1.compareTo(nomeC2);
         };
+
+        lista.sort(comp);
+
+        lista.forEach( (conta) -> System.out.println(conta + " , " + conta.getTitular().getNome()) );
 
         for (Conta conta : lista) {
             System.out.println(conta + " , " + conta.getTitular().getNome());
