@@ -9,10 +9,11 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 
 public class TesteEscritaPrintStreamPrintWriter {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
         
     
         // OutputStream fos = new FileOutputStream("lorem.txt");
@@ -21,7 +22,7 @@ public class TesteEscritaPrintStreamPrintWriter {
         //FileWriter fw = new FileWriter("lorem2.txt");
         // BufferedWriter bw = new BufferedWriter(new FileWriter("lorem2.txt"));
 
-        PrintWriter ps = new PrintWriter("lorem2.txt");
+        PrintWriter ps = new PrintWriter("lorem2.txt", "UTF-8");
 
         //PrintStream ps = new PrintStream("lorem2.txt");
 

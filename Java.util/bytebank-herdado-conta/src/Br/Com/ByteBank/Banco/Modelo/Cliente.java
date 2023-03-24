@@ -1,5 +1,8 @@
 package Br.Com.ByteBank.Banco.Modelo;
-public class Cliente extends Object {
+
+import java.io.Serializable;
+
+public class Cliente implements Serializable  {
     private String nome;
     private String cpf;
     private String profissao;
