@@ -24,6 +24,6 @@ public class TestaListaDeAula {
 
         System.out.println(aulas);
 
-        aulas.sort(Comparator.comparing(Aula::getTempo)); // Java *
+        aulas.sort(Comparator.comparing(Aula::getTempo)); // Java 8
     }
 }
